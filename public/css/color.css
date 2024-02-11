@@ -1,0 +1,24 @@
+.text-app-red{
+  color: #440100;
+
+}
+.text-app-blue{
+  color: #6BA2FF;
+}
+.bg-app-red{
+  background-color: #440100;
+
+}
+.bg-app-blue{
+  background-color: #6BA2FF;
+}
+.app-button{
+  border-radius: 15%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.app-button:hover{
+  background-color: white;
+  color: black;
+  outline: black solid 2px;
+}
