@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'cas-mono';
+  src: url('/font/Cascadia.ttf');
+}
+@font-face {
+  font-family: 'stm-reg';
+  src: url('/font/ShareTechMono-Regular.ttf');
+}
+.font-casmono{
+  font-family: 'cas-mono';
+}
+.font-stmreg{
+  font-family: 'stm-reg';
+}
 .text-app-red{
   color: #440100;
 
