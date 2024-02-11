@@ -12,6 +12,9 @@
 .bg-app-blue{
   background-color: #6BA2FF;
 }
+.bg-app-grey{
+  background-color: #ABBDC2;
+}
 .app-button{
   border-radius: 15%;
   cursor: pointer;
