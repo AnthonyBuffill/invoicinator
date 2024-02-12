@@ -89,12 +89,3 @@ router.delete('/dashboard/invoices/:id/delete', async (req, res) => {
 });
 
 module.exports = router;
-
-// This file defines routes for the dashboard section of the application.
-// It includes routes for fetching, updating, marking as paid, and deleting invoices.
-// The routes require user authentication and handle unauthorized access appropriately.
-// - GET /dashboard: Fetches invoices for the logged-in user and renders the dashboard view.
-// - POST /dashboard/invoices/:id/mark-paid: Marks an invoice as paid.
-// - PUT /dashboard/invoices/:id/update: Updates an existing invoice.
-// - DELETE /dashboard/invoices/:id/delete: Deletes an invoice.
-// Errors are caught and rendered with appropriate error messages.
