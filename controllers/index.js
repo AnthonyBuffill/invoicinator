@@ -9,3 +9,4 @@ router.use('/', dashboardRoutes);
 router.use('/api', apiRoutes);
 
 module.exports = router;
+
