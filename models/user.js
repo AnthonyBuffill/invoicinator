@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> c944fdb23398d07ee43cf732fa54ed412b7e15ad
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -43,7 +40,7 @@ User.init(
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-<<<<<<< HEAD
+
         try{
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
@@ -52,18 +49,13 @@ User.init(
         return err;
       }
      },
-    },
     
-=======
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
       beforeUpdate: async (updatedUserData) => {
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       },
     },
->>>>>>> c944fdb23398d07ee43cf732fa54ed412b7e15ad
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -72,8 +64,6 @@ User.init(
   }
 );
 
-<<<<<<< HEAD
+
 module.exports = User;
-=======
-module.exports = User;
->>>>>>> c944fdb23398d07ee43cf732fa54ed412b7e15ad
+
