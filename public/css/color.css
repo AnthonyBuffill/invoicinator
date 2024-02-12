@@ -29,12 +29,23 @@
 .bg-app-grey{
   background-color: #ABBDC2;
 }
+
 .app-button{
   border-radius: 15%;
   cursor: pointer;
   transition-duration: 0.4s;
 }
+.app-button-flat{
+  border-radius: 5%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
 .app-button:hover{
+  background-color: white;
+  color: black;
+  outline: black solid 2px;
+}
+.app-button-flat:hover{
   background-color: white;
   color: black;
   outline: black solid 2px;
