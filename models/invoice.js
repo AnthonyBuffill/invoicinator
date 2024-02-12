@@ -1,98 +1,98 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Invoice extends Model {}
+class Invoice extends Model { }
 
 Invoice.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        invoiceAmount: {
+            type: DataTypes.Integer,
+            allowNull: false,
+        },
+        paidStatus: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        invoiceNumber: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+        },
+        companyName: {
+            type: DataTypes.String,
+            allowNull: false,
+        },
+        companyStreetAddress: {
+            type: DataTypes.String,
+            allowNull: true
+        },
+        companyCityAddress: {
+            type: DataTypes.String,
+            allowNull: true
+        },
+        companyEmail: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true,
+            },
+        },
+        clientName: {
+            type: DataTypes.String,
+            allowNull: false,
+        },
+        clientStreetAddress: {
+            type: DataTypes.String,
+            allowNull: true
+        },
+        clientCityAddress: {
+            type: DataTypes.String,
+            allowNull: true
+        },
+        clientEmail: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true,
+            },
+        },
+        dateCreated: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
+        dueDate: {
+            type: DataTypes.Date,
+            allowNull: false,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
+        invoice_details: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
     },
-    invoiceAmount: {
-      type: DataTypes.Integer,
-      allowNull: false,
-    },
-    paidStatus: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    },
-    invoiceNumber: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-    },
-    companyName:{
-        type: DataTypes.String,
-        allowNull: false,
-    },
-    companyStreetAddress: {
-        type: DataTypes.String,
-        allowNull:true
-    },
-    companyCityAddress: {
-        type:DataTypes.String,
-        allowNull:true
-    },
-    companyEmail: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: {
-      isEmail: true,
-    },
-},
-clientName:{
-    type: DataTypes.String,
-    allowNull: false,
-},
-clientStreetAddress: {
-    type: DataTypes.String,
-    allowNull:true
-},
-clientCityAddress: {
-    type:DataTypes.String,
-    allowNull:true
-},
-clientEmail: {
-type: DataTypes.STRING,
-allowNull: false,
-unique: true,
-validate: {
-  isEmail: true,
-},
-},
-    dateCreated: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    dueDate: {
-        type: DataTypes.Date,
-        allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
-    invoice_details: {
-        type: DataTypes.TEXT,
-        allowNull:false,
-    },
-},
-  
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'invoice',
-  }
+
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'invoice',
+    }
 );
 
-module.exports = Blogpost;
+module.exports = Invoice;
