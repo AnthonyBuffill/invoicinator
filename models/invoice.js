@@ -95,4 +95,4 @@ validate: {
   }
 );
 
-module.exports = Blogpost;
+module.exports = Invoice;
