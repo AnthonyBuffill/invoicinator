@@ -1,0 +1,28 @@
+
+[
+  {
+    "name": "Ivan Danko",
+    "email": "joshcandoit.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Jon Kimble",
+    "email": "lukegotthis.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Ben Richards",
+    "email": "briandontquit.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Gordy Brewer",
+    "email": "michaelcantstop.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Harry Tasker",
+    "email": "anthonyunlimited.com",
+    "password": "password12345"
+  }
+]
