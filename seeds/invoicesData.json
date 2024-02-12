@@ -1,0 +1,34 @@
+[
+    {
+      "invoiceAmount": 1700,
+      "paidStatus": True,
+      "invoiceNumber": "73FC871",
+      "clientEmail": "GettotheChoppa@Predator.com",
+      "dueDate": "02/14/2024",
+      "dateCreated": "Jan 16th, 10:00AM"
+    },
+    {
+        "invoiceAmount": 23.00,
+        "paidStatus": True,
+        "invoiceNumber": "43WQ88",
+        "clientEmail": "ThebridgeisOUT@TrueLies.com",
+        "dueDate": "Feb 14th",
+        "dateCreated": "Jan 16th, 10:00AM"
+      },
+      {
+        "invoiceAmount": 125.52,
+        "paidStatus": True,
+        "invoiceNumber": "96AS43",
+        "clientEmail": "Hastalavista@Terminator.com",
+        "dueDate": "Feb 14th",
+        "dateCreated": "Jan 16th, 10:00AM"
+      },
+      {
+        "invoiceAmount": 2.17,
+        "paidStatus": True,
+        "invoiceNumber": "10MG29",
+        "clientEmail": "Ieatgreenberetsforbreakfast@Commando.com",
+        "dueDate": "Feb 14th",
+        "dateCreated": "Jan 16th, 10:00AM"
+      },
+  ]
