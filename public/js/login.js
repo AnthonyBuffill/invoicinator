@@ -43,25 +43,30 @@ const signupFormHandler = async (event) => {
   event.preventDefault();
 
   
-  const name = document.querySelector('#name-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-
-  if (name && email && password) {
-   
-    const response = await fetch('/api/users/signup', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      window.location.href = '/home';
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const name = document.querySelector('#name-signup').value.trim();
+    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+    const confirmPassword = document.querySelector('#confirm-password-signup').value.trim();
+  
+    if (name && email && password && confirmPassword && password === confirmPassword) {
+      const response = await fetch('/api/users/signup', {
+        method: 'POST',
+        body: JSON.stringify({ name, email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        window.location.href = '/home';
+      } else {
+        alert('Failed to sign up');
+      }
     } else {
-      alert('Failed to log in');
+      alert('Passwords do not match or some fields are empty');
     }
-  }
-};
+  };
 
 const signupForm = document.querySelector('.signup-form');
 
@@ -69,4 +74,4 @@ if (signupForm) {
   signupForm.addEventListener('submit', signupFormHandler);
 } else {
   console.error('Signup form element not found in the DOM.');
-}
+}}
