@@ -14,9 +14,17 @@ router.post('/', async (req, res) => {
     const newInvoice = await Invoice.create(req.body);
 
    
-    const companyUser = await User.findByPk( req.session.user_id);
+    const companyUser = await User.findByPk(req.session.user_id);
+    if (!companyUser) {
+        console.error('User not found');
+        // Handle the case where user is not found, e.g., return an error response
+        return res.status(404).json({ error: 'User not found' });
+    }
+    
+    // Now that we've ensured companyUser is not null, access its properties
     const companyEmail = companyUser.email;
     const companyName = companyUser.name;
+    
 
     
     const clientEmail = req.body.clientEmail;
