@@ -3,17 +3,17 @@
   <form class="">
     <div class="pt-5">
       <label class="label-item" for="invoice-num">invoice#:</label>
-      <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8" require>
+      <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8">
     
       <input type="text" placeholder="Your Company Name" id="company-name">
     </div>
     <div>
       <label class="label-item" for="payment-due">Payment Due:</label>
-      <input type="date" id="payment-due" require>
+      <input type="date" id="payment-due">
     </div>
     <div>
       <label class="label-item" for="amount-due">Amount Due:</label>
-      <input type="number" placeholder="0.00" id="amount-due" require>
+      <input type="number" placeholder="0.00" id="amount-due">
     </div>
 
 <div style="display: flex;">
@@ -21,7 +21,7 @@
     <div id="invoice-user-container">
       <div>
         <label class="label-item" for="user-email">User:</label>
-        <input type="email" placeholder="Your Email" id="user-email" require>
+        <input type="email" placeholder="Your Email" id="user-email">
       </div>
       <div>
         <label class="label-item" for="user-name"></label>
@@ -39,7 +39,7 @@
     <div id="invoice-client-container">
       <div>
         <label class="label-item-right" for="client-email">Client:</label>
-        <input type="email" placeholder="Your Email" id="client-email" require>
+        <input type="email" placeholder="Your Email" id="client-email">
       </div>
       <div>
         <label class="label-item-right" for="client-name"></label>
@@ -64,4 +64,5 @@
       <button type="submit" id="send-invoice-button">Send Invoice</button>
     </div>
   </form>
+  <script src="/js/invoice.js"></script>
 </div>
