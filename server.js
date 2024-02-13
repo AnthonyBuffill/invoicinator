@@ -47,6 +47,9 @@ app.get("/user", (req, res)=>{
 app.get("/dashboard", (req, res)=>{
   res.render("dashboard");
 });
+app.get("/create", (req, res)=>{
+  res.render("invoice");
+});
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
