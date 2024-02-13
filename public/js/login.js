@@ -77,7 +77,7 @@ if (signupForm) {
 }}
 
 document.onload = (event) =>{
-  document.getElementById('submit-button') = (event) =>{
+  document.getElementById('signup-button') = (event) =>{
     // if(event.target.)
   };
 };
