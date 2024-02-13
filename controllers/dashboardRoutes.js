@@ -25,19 +25,14 @@ router.get('/dashboard', async (req, res) => {
 // POST, marking an invoice as paid
 router.post('/dashboard/invoices/:id/mark-paid', async (req, res) => {
     try {
-        // Check if user is logged in (you can define your own logic here)
         if (!req.user) {
-            // Redirect to login page or handle unauthorized access
             return res.redirect('/login');
         }
 
-        // Find the invoice by ID
         const invoice = await Invoice.findByPk(req.params.id);
 
-        // Update the invoice status to 'paid'
         await invoice.update({ status: 'paid' });
 
-        // Redirect back to the dashboard
         res.redirect('/dashboard');
     } catch (error) {
         console.error('Error marking invoice as paid:', error);
@@ -48,16 +43,13 @@ router.post('/dashboard/invoices/:id/mark-paid', async (req, res) => {
 // PUT, update an existing invoice
 router.put('/dashboard/invoices/:id/update', async (req, res) => {
     try {
-        // Check if user is logged in 
         if (!req.user) {
-            // Redirect to login page or handle unauthorized access
             return res.redirect('/login');
         }
 
         // Find the invoice by ID
         const invoice = await Invoice.findByPk(req.params.id);
 
-        // Update the invoice with the new data
         await invoice.update(req.body);
 
         // Redirect back to the dashboard

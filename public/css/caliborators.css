@@ -13,6 +13,7 @@ body {
 
 h1 {
     margin-bottom: 40px;
+    font-weight: bold;
     color: maroon;
 }
 
@@ -32,41 +33,41 @@ ul {
     padding: 20px;
     margin: 10px;
     text-align: center;
-    width: 250px; /* Adjust the width as needed */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
+    width: 250px; 
+    transition: transform 0.3s ease; 
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Add a slight lift on hover */
+    transform: translateY(-5px); 
 }
 
 .img {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
-    border-radius: 50%; /* Makes the image round */
-    margin: 0 auto 20px; /* Center the image and add space below */
-    border: 3px solid white; /* Add a border around the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 150px; 
+    height: 150px; 
+    border-radius: 5%; 
+    margin: 0 auto 20px; 
+    border: 3px solid white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card h3 {
     margin-top: 0;
-    color: #333; /* Change the heading color */
+    color: #333; 
 }
 
 .card p {
     margin: 10px 0;
-    color: #666; /* Change the paragraph text color */
+    color: #666; 
 }
 
 .card a {
     display: inline-block;
-    margin-top: 10px; /* Space between links */
+    margin-top: 10px; 
     text-decoration: none;
     color: #007bff; 
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease; 
 }
 
 .card a:hover {
-    color: #0056b3; /* Link color on hover */
+    color: #0056b3; 
 }
