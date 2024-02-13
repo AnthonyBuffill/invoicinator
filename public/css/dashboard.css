@@ -1,0 +1,67 @@
+#main-container{
+  margin-top: 200px;
+  width: 800px;
+}
+#invoice-options{
+  width: 100%;
+  margin-bottom: 20px;
+}
+#invoice-options aside{
+  list-style-type: none;
+  font-size: 18px;
+}
+#invoice-options aside li{
+  margin: 0 25px 0 1px;
+  cursor: pointer;
+  display: inline;
+}
+#invoice-options aside div{
+  margin: 0 0 8px 0;
+  float:right;
+}
+.invoice-option-selected{
+  text-decoration: underline;
+  font-size: 21px;
+}
+#invoices{
+  height: 100%;
+}
+#titles{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+#titles h4{
+  font-size: 18px;
+  font-weight: bold;
+}
+#invoice-list{
+  
+}
+.invoice-container{
+  display: inline-flex;
+  border: 3px solid black;
+  width: 100%;
+  /* justify-content: flex-start; */
+}
+.invoice-item{
+  margin: auto 3px;
+}
+.invoice-amount{
+  width: 115px;
+}
+.invoice-status{
+  width: 100px;
+}
+.invoice-number{
+  width: 100px;
+}
+.invoice-customer{
+  width: 285px;
+}
+.invoice-due{
+  width: 100px;
+}
+.invoice-created{
+  width: 100px;
+}

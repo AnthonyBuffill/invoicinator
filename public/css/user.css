@@ -1,0 +1,39 @@
+#user-container{
+  width: 350px;
+  height: 410px;
+  margin: auto;
+  margin-top: 50px;
+}
+#signup-container{
+  height: 100%;
+}
+form{
+
+}
+label{
+  
+}
+input{
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+}
+.signupbtn{
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.swap-button{
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+.swap-button a{
+  text-decoration: none;
+  cursor: pointer;
+}
