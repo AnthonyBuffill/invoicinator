@@ -15,6 +15,9 @@
       <label class="label-item" for="amount-due">Amount Due:</label>
       <input type="number" placeholder="0.00" id="amount-due" require>
     </div>
+
+<div style="display: flex;">
+
     <div id="invoice-user-container">
       <div>
         <label class="label-item" for="user-email">User:</label>
@@ -35,22 +38,24 @@
     </div>
     <div id="invoice-client-container">
       <div>
-        <label class="label-item" for="client-email">Client:</label>
+        <label class="label-item-right" for="client-email">Client:</label>
         <input type="email" placeholder="Your Email" id="client-email" require>
       </div>
       <div>
-        <label class="label-item" for="client-name"></label>
+        <label class="label-item-right" for="client-name"></label>
         <input type="text" placeholder="Your Name" id="client-name">
       </div>
       <div>
-        <label class="label-item" for="client-address"></label>
+        <label class="label-item-right" for="client-address"></label>
         <input type="text" placeholder="Address" id="client-address">
       </div>
       <div>
-        <label class="label-item" for="client-city"></label>
+        <label class="label-item-right" for="client-city"></label>
         <input type="text" placeholder="City, State, Zip" id="client-city">
       </div>
     </div>
+  </div>
+
     <div class="invoice-bottom">
       <div id="details-container">
         <label class="label-item" for="invoice-details">Invoice Details:</label>
