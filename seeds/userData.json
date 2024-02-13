@@ -2,27 +2,27 @@
 [
   {
     "name": "Ivan Danko",
-    "email": "joshcandoit.com",
+    "email": "josh@candoit.com",
     "password": "password12345"
   },
   {
     "name": "Jon Kimble",
-    "email": "lukegotthis.com",
+    "email": "luke@gotthis.com",
     "password": "password12345"
   },
   {
     "name": "Ben Richards",
-    "email": "briandontquit.com",
+    "email": "brian@dontquit.com",
     "password": "password12345"
   },
   {
     "name": "Gordy Brewer",
-    "email": "michaelcantstop.com",
+    "email": "michael@cantstop.com",
     "password": "password12345"
   },
   {
     "name": "Harry Tasker",
-    "email": "anthonyunlimited.com",
+    "email": "anthony@unlimited.com",
     "password": "password12345"
   }
 ]
