@@ -5,24 +5,19 @@ const {
 } = require('../models/invoice');
 const withAuth = require('../utils/auth');
 
-// Prevent non-logged-in users from viewing the homepage
-router.get('/', withAuth, async (req, res) => {
-  try {
-    // Fetch invoices from the database for the logged-in user
-    const invoices = await Invoice.findAll({ where: { userId: req.user.id } });
 
-    res.render('homepage', {
-      invoices,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get('/', (req, res) => {
+ 
+  res.render('home'); 
 });
+
+
+
+
 
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }

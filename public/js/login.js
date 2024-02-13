@@ -1,18 +1,11 @@
 
 
-const showLoginForm = (event) => {
-  event.preventDefault();
-  const loginForm = document.getElementById('loginForm');
-  if (loginForm) {
-    loginForm.style.display = (loginForm.style.display === 'block') ? 'none' : 'block';
-  }
-};
 
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const password = document.querySelector('#password').value.trim();
 
   if (email && password) {
     const response = await fetch('/api/users/login', {
@@ -22,44 +15,35 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      window.location.href = '/home';
+      window.location.href = '/dashboard';
     } else {
       alert('Failed to log in');
     }
   }
 };
 
-document.getElementById('login-link').addEventListener('click', function (event) {
-  event.preventDefault();
-  showLoginForm(event);
-});
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
+document.querySelector('#login-button').addEventListener('click', loginFormHandler);
 
 
 
-const signupFormHandler = async (event) => {
-  
-  event.preventDefault();
-
-  
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#name-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-    const confirmPassword = document.querySelector('#confirm-password-signup').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
+    const confirmPassword = document.querySelector('#password-confirm').value.trim();
   
-    if (name && email && password && confirmPassword && password === confirmPassword) {
+    if ( email && password && confirmPassword && password === confirmPassword) {
       const response = await fetch('/api/users/signup', {
         method: 'POST',
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ confirmPassword, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        window.location.href = '/home';
+        window.location.href = '/dashboard';
       } else {
         alert('Failed to sign up');
       }
@@ -68,16 +52,6 @@ const signupFormHandler = async (event) => {
     }
   };
 
-const signupForm = document.querySelector('.signup-form');
+  document.querySelector('#signup-button').addEventListener('click', signupFormHandler);
 
-if (signupForm) {
-  signupForm.addEventListener('submit', signupFormHandler);
-} else {
-  console.error('Signup form element not found in the DOM.');
-}}
-
-document.onload = (event) =>{
-  document.getElementById('submit-button') = (event) =>{
-    // if(event.target.)
-  };
-};
+  
