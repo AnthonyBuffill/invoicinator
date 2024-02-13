@@ -1,67 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+{{> main-header}}
+  <div class="container pt-5">
+    <div class="bg-app-red" id="user-container" style="visibility: hidden;">
+      <h2 class="text-app-blue text-center p-2">InvoicInator</h2>
+      <div class="bg-app-grey" id="signup-container">
+        <div class="container">
+          <p class="signup-item pt-2" id="tagline">
+            Create your account and get paid
+          </p>
+          <p style="display: none;" class="login-item pt-2">
+            Total Recall of your account
+          </p>
+          <form class="login-form">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter Email" id="email" required>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css"> <!-- Link to your style.css file -->
-  <style>
-
-    
-    
-  </style>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li id="login-link"><a href="#"><h2>Login</h2></a></li>
-      </ul>
-       <ul>
-        <li id="login-link"><a href="#"><h2>Register</h2></a></li>
-      </ul>
-    </nav>
-  </header>
-
-<div id="loginForm">
-  <form class="form login-form">
-    <div class="form-group">
-      <label for="email-login">Email:</label>
-      <input class="form-input" type="text" id="email-login" />
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" id="password" required>
+            <div id="confirm-password-container">
+              <label class="signup-item" for="password-confirm" data-hidden="true">Confirm Password</label>
+              <input class="signup-item" type="password" placeholder="Confirm Password" id="password-confirm" data-hidden="true" require>
+            </div>
+            <button type="submit" class="signupbtn" id="signup-button">Sign Up</button>
+            <button type="submit" class="signupbtn" id="login-button">Login</button>
+          </form>
+          <div class="swap-button text-center"><a id="swap-button">Login</a></div>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="password-login">Password:</label>
-      <input class="form-input" type="password" id="password-login" />
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">Login</button>
-    </div>
-  </form>
-</div>
-
-<div class="signup-form">
-  <form class="form signup-form">
-    <div class="form-group">
-      <label for="name-signup">Username:</label>
-      <input class="form-input" type="text" id="name-signup" />
-    </div>
-    <div class="form-group">
-      <label for="email-signup">Email:</label>
-      <input class="form-input" type="text" id="email-signup" />
-    </div>
-    <div class="form-group">
-      <label for="password-signup">Password:</label>
-      <input class="form-input" type="password" id="password-signup" />
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">Signup</button>
-    </div>
-  </form>
-</div>
-
-  <script defer src="/js/login.js"></script>
-
-</body>
-
-</html>
+    <script src="/js/user-form.js"></script>
+       <script src="/js/login.js"></script>
+  </div>

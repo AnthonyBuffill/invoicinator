@@ -1,0 +1,32 @@
+{{> header-loggedin}}
+<div class="container" id="main-container">
+  <div id="invoice-options">
+    <aside>
+      <li class="font-casmono invoice-option-selected">All Invoices</li>
+      <li class="font-casmono">Outstanding</li>
+      <li class="font-casmono">Overdue</li>
+      <li class="font-casmono">Paid</li>
+
+      <div>
+        <a class="bg-link py-1 px-2 app-button-flat text-white"><b>Get Started</b></a>
+      </div>
+    </aside>
+  </div>
+  <section class="bg-app-grey min-100-vh" id="invoices">
+    <div id="titles">
+      <h4 class="invoice-item invoice-amount font-casmono">Amount</h4>
+      <h4 class="invoice-item invoice-status font-casmono">Status</h4>
+      <h4 class="invoice-item invoice-number font-casmono">Inv#</h4>
+      <h4 class="invoice-item invoice-customer font-casmono">Customer</h4>
+      <h4 class="invoice-item invoice-due font-casmono">Due</h4>
+      <h4 class="invoice-item invoice-created font-casmono">Created</h4>
+    </div>
+    <div id="invoice-list">
+
+      {{> invoice-container}}
+      {{> invoice-container}}
+      {{> invoice-container}}
+      {{> invoice-container}}
+    </div>
+  </section>
+</div>

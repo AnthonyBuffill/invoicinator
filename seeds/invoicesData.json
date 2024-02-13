@@ -1,34 +1,67 @@
 [
-    {
-      "invoiceAmount": 1700,
-      "paidStatus": true,
-      "invoiceNumber": "73FC871",
-      "clientEmail": "GettotheChoppa@Predator.com",
-      "dueDate": "02/14/2024",
-      "dateCreated": "01/16/2024"
-    },
-    {
-        "invoiceAmount": 23.00,
-        "paidStatus": false,
-        "invoiceNumber": "43WQ88",
-        "clientEmail": "ThebridgeisOUT@TrueLies.com",
-        "dueDate": "03/17/2024",
-        "dateCreated": "01/25/2024"
-      },
-      {
-        "invoiceAmount": 125.52,
-        "paidStatus": false,
-        "invoiceNumber": "96AS43",
-        "clientEmail": "Hastalavista@Terminator.com",
-        "dueDate": "04/20/2024",
-        "dateCreated": "02/12/2024"
-      },
-      {
-        "invoiceAmount": 2.17,
-        "paidStatus": true,
-        "invoiceNumber": "10MG29",
-        "clientEmail": "Ieatgreenberetsforbreakfast@Commando.com",
-        "dueDate": "02/29/2024",
-        "dateCreated": "01/01/2024"
-      }
-  ]
+  {
+    "invoiceAmount": 1700,
+    "paidStatus": true,
+    "invoiceNumber": "73FC871",
+    "clientEmail": "GettotheChoppa@Predator.com",
+    "dueDate": "02/14/2024",
+    "dateCreated": "01/16/2024",
+    "companyName": "",
+    "companyStreetAddress": "1234 Summer",
+    "companyCityAddress": "Commando, Maryland 12345",
+    "companyEmail": "Gracias@gracias.com",
+    "clientName": "John Conner",
+    "clientStreetAddress": "1234 Spring",
+    "clientCityAddress": "Terminator, Tennessee 23456",
+    "user_id": "1",
+    "invoice_details": "Rise against the Machine"
+  },
+  {
+    "invoiceAmount": 23.00,
+    "paidStatus": false,
+    "invoiceNumber": "43WQ88",
+    "clientEmail": "ThebridgeisOUT@TrueLies.com",
+    "dueDate": "03/17/2024",
+    "dateCreated": "01/25/2024",
+    "companyStreetAddress": "1234 Autumn",
+    "companyCityAddress": "Kindegarten Cop, California 34567",
+    "companyEmail": "Merci@merci.com",
+    "clientName": "Ted Lasso",
+    "clientStreetAddress": "1234 Fall Lane",
+    "clientCityAddress": "Total Recall, Georgia 56789",
+    "user_id": "2",
+    "invoice_details": "Predator Bow"
+  },
+  {
+    "invoiceAmount": 125.52,
+    "paidStatus": false,
+    "invoiceNumber": "96AS43",
+    "clientEmail": "Hastalavista@Terminator.com",
+    "dueDate": "04/20/2024",
+    "dateCreated": "02/12/2024",
+    "companyStreetAddress": "1234 Winter Walk",
+    "companyCityAddress": "Twins, Minnesota 98765",
+    "companyEmail": "Prego@Prego.com",
+    "clientName": "Conan Barbarian",
+    "clientStreetAddress": "1234 Hiver",
+    "clientCityAddress": "T2 Wyoming 87654",
+    "user_id": "3",
+    "invoice_details": "Commando paint"
+  },
+  {
+    "invoiceAmount": 2.17,
+    "paidStatus": true,
+    "invoiceNumber": "10MG29",
+    "clientEmail": "Ieatgreenberetsforbreakfast@Commando.com",
+    "dueDate": "02/29/2024",
+    "dateCreated": "01/01/2024",
+    "companyStreetAddress": "1234 Printemps Place",
+    "companyCityAddress": "T3 Terrace",
+    "companyEmail": "ete@ete.com",
+    "clientName": "Anthony Roth",
+    "clientStreetAddress": "1234 Fleuve",
+    "clientCityAddress": "T4, Texas 65432",
+    "user_id": "4",
+    "invoice_details": "Choppa"
+  }
+]

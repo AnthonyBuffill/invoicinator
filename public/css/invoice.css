@@ -1,0 +1,58 @@
+#main-create-container{
+  margin-top: 60px;
+  width: 900px;
+}
+.label-item{
+  width:150px;
+  text-align: right;
+  margin-right: 5px;
+}
+.label-item-right{
+  width:83px;
+  text-align: right;
+  margin-right: 5px;
+}
+#invoice-num, #payment-due, #amount-due{
+  display: inline;
+  width: 200px;
+  padding: 5px;
+}
+#company-name{
+  float:right;
+  display: inline;
+  width: 300px;
+  padding: 5px;
+  margin-right: 75px;
+}
+
+#user-email, #user-name, #user-address, #user-city,
+#client-email, #client-name, #client-address, #client-city{
+  display: inline;
+  width: 275px;
+  padding: 5px;
+}
+#invoice-user-container, #invoice-client-container{
+  width: 450px;
+  /* float:left; */
+}
+.invoice-bottom{
+  margin-top: 50px;
+}
+#details-container{
+  display:flex; 
+  align-items: center;
+  float:left;
+}
+#invoice-details{
+  display: inline;
+  width: 660px;
+  height: 100px;
+  margin-left: 4px;
+  
+}
+#send-invoice-button{
+  float: right;
+  padding: 5px;
+  margin-top: 25px;
+  margin-right: 75px;
+}

@@ -5,9 +5,17 @@ const {
 } = require('../models/invoice');
 const withAuth = require('../utils/auth');
 
+
+
 router.get('/', (req, res) => {
-  res.render('home');
+ 
+  res.render('home'); 
+
 });
+
+
+
+
 
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
