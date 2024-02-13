@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'cas-mono';
+  src: url('/font/Cascadia.ttf');
+}
+@font-face {
+  font-family: 'stm-reg';
+  src: url('/font/ShareTechMono-Regular.ttf');
+}
+.font-casmono{
+  font-family: 'cas-mono';
+}
+.font-stmreg{
+  font-family: 'stm-reg';
+}
+.text-app-red{
+  color: #440100;
+
+}
+.text-app-blue{
+  color: #6BA2FF;
+}
+.bg-app-red{
+  background-color: #440100;
+
+}
+.bg-app-blue{
+  background-color: #6BA2FF;
+}
+.bg-app-grey{
+  background-color: #ABBDC2;
+}
+
+.app-button{
+  border-radius: 15%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.app-button-flat{
+  border-radius: 5%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.app-button:hover{
+  background-color: white;
+  color: black;
+  outline: black solid 2px;
+}
+.app-button-flat:hover{
+  background-color: white;
+  color: black;
+  outline: black solid 2px;
+}
