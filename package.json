@@ -20,7 +20,6 @@
     "express": "^4.18.2",
     "express-handlebars": "^5.3.5",
     "express-session": "^1.18.0",
-    "mailjet": "^0.0.1",
     "mysql2": "^2.3.3",
     "node-mailjet": "^6.0.5",
     "sequelize": "^6.37.0"
