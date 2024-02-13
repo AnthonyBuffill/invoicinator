@@ -75,3 +75,9 @@ if (signupForm) {
 } else {
   console.error('Signup form element not found in the DOM.');
 }}
+
+document.onload = (event) =>{
+  document.getElementById('submit-button') = (event) =>{
+    // if(event.target.)
+  };
+};

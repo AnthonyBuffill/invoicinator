@@ -32,7 +32,8 @@ function showItems(items){
 window.onload = (event) =>{
   const tagline = document.getElementById("tagline");
   const swapButton = document.getElementById("swap-button");
-  const submitButton = document.getElementById("submit-button");
+  const signupButton = document.getElementById("signup-button");
+  const loginButton = document.getElementById("login-button");
   const confirmPasswordContainer = document.getElementById("confirm-password-container");
   swapButton.onclick = (event)=>{
     if(window.location.hash == "#login"){
@@ -41,21 +42,20 @@ window.onload = (event) =>{
       setLogin();
     }
   }
-  submitButton.onclick = (event)=>{
-    event.preventDefault();
-  }
 
   function setSignUp(){
     window.location.hash = "#signup";
       swapButton.textContent = "Login";
-      submitButton.textContent = "Sign Up";
+      signupButton.style.display = 'block';
+      loginButton.style.display = 'none';
       tagline.textContent = "Create your account and get paid";
       confirmPasswordContainer.style.visibility = "visible";
   }
   function setLogin(){
     window.location.hash = "#login";
     swapButton.textContent = "Sign Up";
-    submitButton.textContent = "Login";
+    signupButton.style.display = 'none';
+    loginButton.style.display = 'block';
     tagline.textContent = "Total Recall of your account";
     confirmPasswordContainer.style.visibility = "hidden";
   }
