@@ -54,4 +54,10 @@ document.querySelector('#login-button').addEventListener('click', loginFormHandl
 
   document.querySelector('#signup-button').addEventListener('click', signupFormHandler);
 
-  
+
+document.onload = (event) =>{
+  document.getElementById('signup-button') = (event) =>{
+    // if(event.target.)
+  };
+};
+

@@ -83,6 +83,7 @@ Invoice.init(
             allowNull: false,
         },
     },
+   
 
     {
         sequelize,

@@ -103,12 +103,12 @@ Email : Abuffill@outlook.com
 
 Joshua Roth
 GITHUB profile : https://github.com/JoshRTheDeveloper  
-Email : 
+Email : raider4414@gmail.com
 
 Luke Garnsey
 Joshua Roth
 GITHUB profile : https://github.com/LukeGarnsey 
-Email : 
+Email : lukegarnsey@gmail.com
 
 Brian Doherty
 Joshua Roth
@@ -118,7 +118,7 @@ Email :
 Michael Graham
 Joshua Roth
 GITHUB profile : https://github.com/MWG396 
-Email : 
+Email : michael.graham1029@gmail.com
 
 
 
