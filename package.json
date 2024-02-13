@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^8.6.0",
@@ -23,5 +24,6 @@
     "mysql2": "^2.3.3",
     "node-mailjet": "^6.0.5",
     "sequelize": "^6.37.0"
+
   }
 }
