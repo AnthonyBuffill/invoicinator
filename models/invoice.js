@@ -39,7 +39,6 @@ Invoice.init(
         companyEmail: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
             validate: {
                 isEmail: true,
             },
@@ -59,7 +58,6 @@ Invoice.init(
         clientEmail: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
             validate: {
                 isEmail: true,
             },
