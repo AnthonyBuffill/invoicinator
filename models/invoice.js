@@ -12,7 +12,7 @@ Invoice.init(
             autoIncrement: true,
         },
         invoiceAmount: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL (10,2),
             allowNull: false,
         },
         paidStatus: {
