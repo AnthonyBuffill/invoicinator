@@ -12,7 +12,7 @@ Invoice.init(
       autoIncrement: true,
     },
     invoiceAmount: {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     paidStatus: {
@@ -25,15 +25,15 @@ Invoice.init(
         unique: true,
     },
     companyName:{
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     companyStreetAddress: {
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull:true
     },
     companyCityAddress: {
-        type:DataTypes.String,
+        type:DataTypes.STRING,
         allowNull:true
     },
     companyEmail: {
@@ -45,15 +45,15 @@ Invoice.init(
     },
 },
 clientName:{
-    type: DataTypes.String,
+    type: DataTypes.STRING,
     allowNull: false,
 },
 clientStreetAddress: {
-    type: DataTypes.String,
+    type: DataTypes.STRING,
     allowNull:true
 },
 clientCityAddress: {
-    type:DataTypes.String,
+    type:DataTypes.STRING,
     allowNull:true
 },
 clientEmail: {
@@ -70,7 +70,7 @@ validate: {
       defaultValue: DataTypes.NOW,
     },
     dueDate: {
-        type: DataTypes.Date,
+        type: DataTypes.DATE,
         allowNull: false,
     },
     user_id: {
