@@ -15,17 +15,17 @@ router.get('/', (req, res) => {
 router.post('/login', (req, res) => {
   User.findOne({
           where: {
-              username: req.body.username
+              email: req.body.email
           }
       }).then(dbUserData => {
           if (!dbUserData) {
-              res.status(400).json({ message: 'No user with that username!' });
+              res.status(400).json({ message: 'No user with that email or password!' });
               return;
           }
           const validPassword = dbUserData.checkPassword(req.body.password);
 
           if (!validPassword) {
-              res.status(400).json({ message: 'Incorrect password!' });
+              res.status(400).json({ message: 'No user with that email or password!' });
               return;
           }
           req.session.save(() => {
