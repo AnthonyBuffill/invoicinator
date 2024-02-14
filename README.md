@@ -106,17 +106,14 @@ GITHUB profile : https://github.com/JoshRTheDeveloper
 Email : raider4414@gmail.com
 
 Luke Garnsey
-Joshua Roth
 GITHUB profile : https://github.com/LukeGarnsey 
 Email : lukegarnsey@gmail.com
 
 Brian Doherty
-Joshua Roth
 GITHUB profile : https://github.com/BDoherty1  
-Email : 
+Email : bdoherty988@gmail.com
 
 Michael Graham
-Joshua Roth
 GITHUB profile : https://github.com/MWG396 
 Email : michael.graham1029@gmail.com
 

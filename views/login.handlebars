@@ -10,15 +10,15 @@
           <p style="display: none;" class="login-item pt-2">
             Total Recall of your account
           </p>
-          <form>
+          <form class="login-form">
             <label for="email">Email</label>
-            <input type="text" placeholder="Enter Email", id="email" require>
+            <input type="text" placeholder="Enter Email" id="email" required>
 
             <label for="password">Password</label>
-            <input type="password" placeholder="Enter Password", id="password" require>
+            <input type="password" placeholder="Enter Password" id="password" required>
             <div id="confirm-password-container">
               <label class="signup-item" for="password-confirm" data-hidden="true">Confirm Password</label>
-              <input class="signup-item" type="password" placeholder="Confirm Password", id="password-confirm" data-hidden="true" require>
+              <input class="signup-item" type="password" placeholder="Confirm Password" id="password-confirm" data-hidden="true" require>
             </div>
             <button type="submit" class="signupbtn" id="signup-button">Sign Up</button>
             <button type="submit" class="signupbtn" id="login-button">Login</button>
@@ -28,4 +28,5 @@
       </div>
     </div>
     <script src="/js/user-form.js"></script>
+       <script src="/js/login.js"></script>
   </div>
