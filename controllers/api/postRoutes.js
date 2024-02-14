@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const withAuth = require('../../utils/auth')
 const { Invoice, User } = require('../../models');
 const Mailjet = require('node-mailjet');
 const mailjet = new Mailjet({
@@ -8,9 +9,14 @@ const mailjet = new Mailjet({
 });
 
 // Route to create a new invoice
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     // Create a new invoice
+    console.log(req.body)
+
+    const paidStatusText = req.body.paidStatus = false;
+    const userID = req.body.user_id = req.session.user_id;
+
     const newInvoice = await Invoice.create(req.body);
 
    
@@ -21,6 +27,8 @@ router.post('/', async (req, res) => {
     
     const clientEmail = req.body.clientEmail;
     const clientName = req.body.clientName;
+    
+
 
     // Construct the HTML content of the email
     const invoiceHtml = `
@@ -37,7 +45,7 @@ router.post('/', async (req, res) => {
     <p>Client Email: ${this.clientEmail}</p>
     <p>Date Created: ${this.dateCreated}</p>
     <p>Due Date: ${this.dueDate}</p>
-    <p>Paid Status: ${paidStatusText}</p>
+    <p>Paid Status: ${this.paidStatusText}</p>
     <p>User ID: ${this.user_id}</p>
     <p>Invoice Details: ${this.invoice_details}</p>
       <!-- Add more invoice details here as needed -->
