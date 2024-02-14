@@ -1,4 +1,5 @@
-{{> header-loggedin}}
+{{> header-loggedin user}}
+
 <div class="container" id="main-container">
   <div id="invoice-options">
     <aside>
@@ -24,10 +25,10 @@
     <div id="invoice-list">
       {{#each invoices as |invoice|}}
       {{> invoice-container}}
-      
       {{/each}}
     </div>
   </section>
+  <script src="/js/dashboard.js"></script>
 </div>
 
 {{!-- {{> invoice-container}}
