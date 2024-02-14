@@ -1,23 +1,23 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: blue;
-}
+} */
 
-.container {
+.collab-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
 
-h1 {
+.collab-container h1 {
     margin-bottom: 40px;
     font-weight: bold;
     color: maroon;
 }
 
-ul {
+.collab-container ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -41,7 +41,7 @@ ul {
     transform: translateY(-5px); 
 }
 
-.img {
+.card .img {
     width: 150px; 
     height: 150px; 
     border-radius: 5%; 
