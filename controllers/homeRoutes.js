@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 

@@ -57,7 +57,7 @@ function postInvoice(jsonObject) {
     return response.json();
   })
   .then(data => {
-    console.log('Invoice successfully sent:', data);
+    window.location.href = '/dashboard';
   })
   .catch(error => {
     console.error('Error sending invoice:', error);

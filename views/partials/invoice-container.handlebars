@@ -1,8 +1,8 @@
 <div class="invoice-container mb-1">
   <h5 class="invoice-item invoice-amount font-stmreg">{{dataValues.invoiceAmount}}</h5>
-  <h5 class="invoice-item invoice-status font-stmreg">{{dataValues.paidStatus}}</h5>
+  <h5 class="invoice-item invoice-status font-stmreg">{{isPayed dataValues.paidStatus}}</h5>
   <h5 class="invoice-item invoice-number font-stmreg">{{dataValues.invoiceNumber}}</h5>
   <h5 class="invoice-item invoice-customer font-stmreg">{{dataValues.clientEmail}}</h5>
-  <h5 class="invoice-item invoice-due font-stmreg">{{dataValues.dueDate}}</h5>
-  <h5 class="invoice-item invoice-created font-stmreg">{{dataValues.dateCreated}}</h5>
+  <h5 class="invoice-item invoice-due font-stmreg">{{formatDate dataValues.dueDate}}</h5>
+  <h5 class="invoice-item invoice-created font-stmreg">{{formatDate dataValues.dateCreated}}</h5>
 </div>  

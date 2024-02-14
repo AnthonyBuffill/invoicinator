@@ -49,19 +49,25 @@
 }
 .invoice-amount{
   width: 115px;
+  font-size: 18px;
 }
 .invoice-status{
   width: 100px;
+  font-size: 14px;
 }
 .invoice-number{
   width: 100px;
+  font-size: 14px;
 }
 .invoice-customer{
   width: 285px;
+  font-size: 16px;
 }
 .invoice-due{
   width: 100px;
+  font-size: 16px;
 }
 .invoice-created{
   width: 100px;
+  font-size: 16px;
 }
