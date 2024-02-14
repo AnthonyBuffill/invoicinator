@@ -54,4 +54,14 @@ document.querySelector('#login-button').addEventListener('click', loginFormHandl
 
   document.querySelector('#signup-button').addEventListener('click', signupFormHandler);
 
+<<<<<<< HEAD
   
+=======
+
+document.onload = (event) =>{
+  document.getElementById('signup-button') = (event) =>{
+    // if(event.target.)
+  };
+};
+
+>>>>>>> d59048facf7ea585066bc42f2e2512fa2b0a8613

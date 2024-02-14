@@ -37,6 +37,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+hbs.handlebars.registerHelper("formatDate", function(datetime) {
+  return `${datetime.getMonth()}/${datetime.getDate()}/${datetime.getFullYear()}`;
+});
+hbs.handlebars.registerHelper("isPayed", function(isPayed) {
+  if(isPayed)
+    return 'Payed';
+  else{
+    return 'Outstanding'
+  }
+});
+
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
