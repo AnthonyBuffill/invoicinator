@@ -30,23 +30,131 @@ router.post('/', withAuth, async (req, res) => {
     const body = req.body;
     // Construct the HTML content of the email
     const invoiceHtml = `
-    <h2>New Invoice Created</h2>
-    <p>Invoice Amount: $${body.invoiceAmount}</p>
-    <p>Invoice Number: ${body.invoiceNumber}</p>
-    <p>Company Name: ${body.companyName}</p>
-    <p>Company Street Address: ${body.companyStreetAddress}</p>
-    <p>Company City Address: ${body.companyCityAddress}</p>
-    <p>Company Email: ${body.companyEmail}</p>
-    <p>Client Name: ${body.clientName}</p>
-    <p>Client Street Address: ${body.clientStreetAddress}</p>
-    <p>Client City Address: ${body.clientCityAddress}</p>
-    <p>Client Email: ${body.clientEmail}</p>
-    <p>Date Created: ${body.dateCreated}</p>
-    <p>Due Date: ${body.dueDate}</p>
-    <p>Paid Status: ${body.paidStatusText}</p>
-    <p>User ID: ${body.user_id}</p>
-    <p>Invoice Details: ${body.invoice_details}</p>
-      <!-- Add more invoice details here as needed -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Invoice</title>
+        <style>
+         body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f4f4;
+              color: #333;
+          }
+  
+          .container {
+              max-width: 600px;
+              margin: 20px auto;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 10px;
+              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          }
+  
+          .header {
+              text-align: left;
+              margin-bottom: 20px;
+              overflow: hidden; 
+          }
+  
+          .invoice-title {
+              font-size: 2em; /* Original size */
+              color: #0066cc;
+              margin: 0;
+              float: left;
+          }
+  
+          .invoice-number {
+              font-size: 1.2em;
+              float: right;
+              margin: 0;
+          }
+  
+          .invoice-details {
+              margin-bottom: 30px;
+              border-bottom: 2px solid #ddd;
+              padding-bottom: 20px;
+          }
+  
+          .due-date {
+              font-size: 1.5em;
+              font-weight: bold;
+              margin-top: 10px;
+          }
+  
+          .address {
+              font-size: 1.2em;
+              text-align: right;
+              margin: 0;
+          }
+          .address {
+              font-size: 1.2em;
+              text-align: right;
+              margin: 0;
+          }
+  
+          .client{
+              font-size: 1.2em;
+              text-align: left;
+              margin: 0;
+          }
+  
+          .company {
+              font-size: 1.2em;
+              text-align: left;
+              margin: 0;
+          }
+  
+          .separator {
+              margin: 20px 0;
+              border-bottom: 1px solid #ddd;
+          }
+  
+          .description {
+              margin-top: 20px;
+          }
+  
+          .footer {
+              margin-top: 20px;
+              text-align: center;
+              color: #888;
+          }
+  
+          .footer p {
+              font-size: 0.8em;
+          }
+      </style>
+    </head>
+    <body>
+    
+        <div class="container">
+            <div class="header">
+                <h1 class="invoice-title">Invoice</h1>
+                <div class="invoice-number">Invoice Number: ${body.invoiceNumber} <br>${body.companyStreetAddress}<br>${body.companyCityAddress}</div>
+            </div>
+            <div class="invoice-details">
+                <div class="due-date">Date Due: ${body.dueDate}</div>
+                <div class="due-date">Amount Due: ${body.invoiceAmount}</div>
+               
+            </div>
+          
+            <div class="separator"></div>
+            <div class="company">From: ${body.companyName}</div>
+            <div class="client">To: ${body.clientName}</div>
+            <div class="description">
+                <p>Invoice Details: ${body.invoice_details}</p>
+            </div>
+            <div class="footer">
+                <p style="font-size: 0.9em;">Thank you for your business! <br> ${body.companyName}</p>
+            </div>
+        </div>
+    </body>
+    </html>
+
     `;
     console.log(invoiceHtml);
     console.log(companyEmail);
