@@ -1,17 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const Invoice = require('../models/invoice');
+const User = require('../models/user');
 const withAuth = require('../utils/auth')
 // GET route for the dashboard
 router.get('/', withAuth, async (req, res) => {
     try {
       
-
         // Fetch invoices from the database for the loggedin user
         const invoices = await Invoice.findAll({ where: { user_id: req.session.user_id } });
-
+        const user = await User.findByPk(req.session.user_id);
         // Render the dashboard view with the fetched invoices
-        res.render('dashboard', { invoices });
+        res.render('dashboard', { invoices, user });
     } catch (error) {
         console.error('Error fetching invoices:', error);
         res.json(error)
@@ -19,7 +19,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // POST, marking an invoice as paid
-router.post('/dashboard/invoices/:id/mark-paid', withAuth, async (req, res) => {
+router.post('/invoices/:id/mark-paid', withAuth, async (req, res) => {
     try {
 
 
@@ -35,7 +35,7 @@ router.post('/dashboard/invoices/:id/mark-paid', withAuth, async (req, res) => {
 });
 
 // PUT, update an existing invoice
-router.put('/dashboard/invoices/:id/update', withAuth, async (req, res) => {
+router.put('/invoices/:id/update', withAuth, async (req, res) => {
     try {
 
 
@@ -53,7 +53,7 @@ router.put('/dashboard/invoices/:id/update', withAuth, async (req, res) => {
 });
 
 // DELETE, invoice
-router.delete('/dashboard/invoices/:id/delete', withAuth, async (req, res) => {
+router.delete('/invoices/:id/delete', withAuth, async (req, res) => {
     try {
        
 
@@ -66,6 +66,10 @@ router.delete('/dashboard/invoices/:id/delete', withAuth, async (req, res) => {
         console.error('Error deleting invoice:', error);
         res.json(error)
     }
+});
+
+router.get('/createinvoice', withAuth, async (req, res)=>{
+    res.render("invoice");
 });
 
 module.exports = router;  

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const withAuth = require('../../utils/auth')
 const { Invoice, User } = require('../../models');
 const Mailjet = require('node-mailjet');
 const mailjet = new Mailjet({
@@ -8,12 +9,17 @@ const mailjet = new Mailjet({
 });
 
 // Route to create a new invoice
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     // Create a new invoice
+
+    const paidStatusText = req.body.paidStatus = false;
+    const userID = req.body.user_id = req.session.user_id;
+
     const newInvoice = await Invoice.create(req.body);
 
    
+<<<<<<< HEAD
     const companyUser = await User.findByPk(req.session.user_id);
     if (!companyUser) {
         console.error('User not found');
@@ -25,34 +31,45 @@ router.post('/', async (req, res) => {
     const companyEmail = companyUser.email;
     const companyName = companyUser.name;
     
+=======
+    // const companyUser = await User.findByPk( req.session.user_id);
+    const companyEmail = "raider4414@gmail.com";
+    const companyName = req.body.companyName;
+>>>>>>> origin
 
-    
     const clientEmail = req.body.clientEmail;
     const clientName = req.body.clientName;
+    
 
+    const body = req.body;
     // Construct the HTML content of the email
     const invoiceHtml = `
     <h2>New Invoice Created</h2>
-    <p>Invoice Amount: $${this.invoiceAmount}</p>
-    <p>Invoice Number: ${this.invoiceNumber}</p>
-    <p>Company Name: ${this.companyName}</p>
-    <p>Company Street Address: ${this.companyStreetAddress}</p>
-    <p>Company City Address: ${this.companyCityAddress}</p>
-    <p>Company Email: ${this.companyEmail}</p>
-    <p>Client Name: ${this.clientName}</p>
-    <p>Client Street Address: ${this.clientStreetAddress}</p>
-    <p>Client City Address: ${this.clientCityAddress}</p>
-    <p>Client Email: ${this.clientEmail}</p>
-    <p>Date Created: ${this.dateCreated}</p>
-    <p>Due Date: ${this.dueDate}</p>
-    <p>Paid Status: ${paidStatusText}</p>
-    <p>User ID: ${this.user_id}</p>
-    <p>Invoice Details: ${this.invoice_details}</p>
+    <p>Invoice Amount: $${body.invoiceAmount}</p>
+    <p>Invoice Number: ${body.invoiceNumber}</p>
+    <p>Company Name: ${body.companyName}</p>
+    <p>Company Street Address: ${body.companyStreetAddress}</p>
+    <p>Company City Address: ${body.companyCityAddress}</p>
+    <p>Company Email: ${body.companyEmail}</p>
+    <p>Client Name: ${body.clientName}</p>
+    <p>Client Street Address: ${body.clientStreetAddress}</p>
+    <p>Client City Address: ${body.clientCityAddress}</p>
+    <p>Client Email: ${body.clientEmail}</p>
+    <p>Date Created: ${body.dateCreated}</p>
+    <p>Due Date: ${body.dueDate}</p>
+    <p>Paid Status: ${body.paidStatusText}</p>
+    <p>User ID: ${body.user_id}</p>
+    <p>Invoice Details: ${body.invoice_details}</p>
       <!-- Add more invoice details here as needed -->
     `;
+    console.log(invoiceHtml);
+    console.log(companyEmail);
+    console.log(companyName);
+    console.log(clientEmail);
+    console.log(clientName);
 
     // Send email using Mailjet
-    const request = mailjet.post('send', { version: 'v3.1' }).request({
+    await mailjet.post('send', { version: 'v3.1' }).request({
       Messages: [
         {
           From: {
@@ -72,7 +89,7 @@ router.post('/', async (req, res) => {
     });
 
     
-    await request;
+    // await request;
 
     
     res.status(201).json(newInvoice);

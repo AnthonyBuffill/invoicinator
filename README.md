@@ -17,6 +17,7 @@ Join the INVOICINATOR revolution – where every invoice is a victory, and every
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+- [Screen Shots](#screen-shots)
 - [Deployment](#deployment)
 - [Questions? Contact Us](#questions-contact-us)
 
@@ -89,9 +90,33 @@ acceptable behavior and will take appropriate and fair corrective action in
 response to any behavior that they deem inappropriate, threatening, offensive,
 or harmful.
 
+## Screen Shots
+
+![Screen Shot 2024-02-13 at 9 22 16 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/a9f014b5-544a-4cd4-ba44-c4be3799804a)
+
+
+![Screen Shot 2024-02-13 at 9 25 49 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/0e76e74a-8099-402f-9745-15263d38c394)
+
+![Screen Shot 2024-02-13 at 9 29 19 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/d9c351e7-bed3-40f4-96e4-36173426e90b)
+
+![Screen Shot 2024-02-13 at 9 30 00 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/6cbb818b-5b83-41cb-af10-ed3447986024)
+
+![Screen Shot 2024-02-13 at 9 32 45 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/69a8b963-d2e1-4323-88be-fac6a5007b66)
+
+![Screen Shot 2024-02-13 at 9 42 16 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/51d1ffa4-4ee3-43ed-97fa-445cde523f06)
+
+![Screen Shot 2024-02-13 at 9 42 54 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/99553504-9ccb-4643-a440-b388d9f0956c)
+
+![Screenshot 2024-02-13 at 9 46 07 PM](https://github.com/AnthonyBuffill/invoicinator/assets/153314977/76c469d4-cc66-4ed4-a0fb-76326d204d21)
+
+
+
+
+
+
 ## Deployment
 
-HEROKU:
+HEROKU: https://invoicinator-e5b9fce169c1.herokuapp.com/dashboard
 
 GITHUB repository: https://github.com/AnthonyBuffill/invoicinator
 
@@ -106,17 +131,15 @@ GITHUB profile : https://github.com/JoshRTheDeveloper
 Email : raider4414@gmail.com
 
 Luke Garnsey
-Joshua Roth
 GITHUB profile : https://github.com/LukeGarnsey 
+
 Email : lukegarnsey@gmail.com
 
 Brian Doherty
-Joshua Roth
 GITHUB profile : https://github.com/BDoherty1  
-Email : 
+Email : bdoherty988@gmail.com
 
 Michael Graham
-Joshua Roth
 GITHUB profile : https://github.com/MWG396 
 Email : michael.graham1029@gmail.com
 
