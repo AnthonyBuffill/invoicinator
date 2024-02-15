@@ -20,6 +20,7 @@ Join the INVOICINATOR revolution – where every invoice is a victory, and every
 - [Screen Shots](#screen-shots)
 - [Deployment](#deployment)
 - [Questions? Contact Us](#questions-contact-us)
+- [Aknowledgement](#acknowledgment)
 
 
 ## Installation
@@ -142,6 +143,12 @@ Email : bdoherty988@gmail.com
 Michael Graham
 GITHUB profile : https://github.com/MWG396 
 Email : michael.graham1029@gmail.com
+
+
+
+## Acknowledgement
+
+Special thanks to Joshua Roth who was an intrical part of this project.  He learned the mailjet technology that encompassed the whole of our application and although the commits in the repository do not tell the story of his contributions, the project could not have been a success without the layers of code he added tot he functionality of our invoice handling.  
 
 
 
