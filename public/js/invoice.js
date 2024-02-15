@@ -1,6 +1,11 @@
 
 document.getElementById("send-invoice-button").onclick = createInvoice;
-
+document.getElementById("invoice-num").value = randomFour()+randomFour();
+function randomFour(){
+  return Math.floor((1 + Math.random()) * 0x10000)
+  .toString(16)
+  .substring(1);
+}
 function createInvoice(event) {
   // Prevent the default form submission behavior
   event.preventDefault();

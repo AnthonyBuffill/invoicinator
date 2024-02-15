@@ -1,19 +1,20 @@
 {{> header-loggedin}}
+
 <div class="container bg-app-grey min-100-vh" id="main-create-container">
   <form class="">
     <div class="pt-5">
       <label class="label-item" for="invoice-num">invoice#:</label>
       <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8">
     
-      <input type="text" placeholder="Your Company Name" id="company-name">
+      {{!-- <input type="text" placeholder="Your Company Name" id="company-name"> --}}
     </div>
     <div>
       <label class="label-item" for="payment-due">Payment Due:</label>
       <input type="date" id="payment-due">
     </div>
     <div>
-      <label class="label-item" for="amount-due">Amount Due:</label>
-      <input type="number" placeholder="0.00" id="amount-due">
+      <label class="label-item" for="amount-due">Amount Due: $</label>
+      <input type="number" placeholder="00.00" id="amount-due">
     </div>
 
 <div style="display: flex;">
@@ -21,19 +22,19 @@
     <div id="invoice-user-container">
       <div>
         <label class="label-item" for="user-email">User:</label>
-        <input type="email" placeholder="Your Email" id="user-email">
+        <input type="email" placeholder="Your Email" id="user-email" value="{{user.email}}">
       </div>
       <div>
-        <label class="label-item" for="user-name"></label>
-        <input type="text" placeholder="Your Name" id="user-name">
+        <label class="label-item" for="company-name"></label>
+        <input type="text" placeholder="Your Name/Company" id="company-name" value="{{user.name}}">
       </div>
       <div>
         <label class="label-item" for="user-address"></label>
-        <input type="text" placeholder="Address" id="user-address">
+        <input type="text" placeholder="Address" id="user-address" value="{{user.address}}">
       </div>
       <div>
         <label class="label-item" for="user-city"></label>
-        <input type="text" placeholder="City, State, Zip" id="user-city">
+        <input type="text" placeholder="City, State, Zip" id="user-city" value="{{user.city}}">
       </div>
     </div>
     <div id="invoice-client-container">
@@ -43,7 +44,7 @@
       </div>
       <div>
         <label class="label-item-right" for="client-name"></label>
-        <input type="text" placeholder="Client Name" id="client-name">
+        <input type="text" placeholder="Client Name/Company" id="client-name">
       </div>
       <div>
         <label class="label-item-right" for="client-address"></label>

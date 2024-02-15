@@ -12,20 +12,31 @@
   text-align: right;
   margin-right: 5px;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 #invoice-num, #payment-due, #amount-due{
   display: inline;
   width: 200px;
   padding: 5px;
 }
-#company-name{
+/* #company-name{
   float:right;
   display: inline;
   width: 300px;
   padding: 5px;
   margin-right: 75px;
-}
+} */
 
-#user-email, #user-name, #user-address, #user-city,
+#user-email, #company-name, #user-address, #user-city,
 #client-email, #client-name, #client-address, #client-city{
   display: inline;
   width: 275px;
