@@ -1,8 +1,19 @@
 <div class="invoice-container mb-1">
   <h5 class="invoice-item invoice-amount font-stmreg">{{dataValues.invoiceAmount}}</h5>
-  <h5 class="invoice-item invoice-status font-stmreg">{{isPayed dataValues.paidStatus}}</h5>
+  
+  <div class="invoice-item invoice-status-dropdown" onclick="toggleStatusDropdown()">
+    <h5 class="invoice-status font-stmreg" id="statusLabel">{{dataValues.paidStatus}}</h5>
+    
+    <!-- Dropdown Menu -->
+    <div class="invoice-status-dropdown-menu" id="statusDropdown">
+      <div onclick="updateStatus('paid')">Paid</div>
+      <div onclick="updateStatus('outstanding')">Outstanding</div>
+      <div onclick="updateStatus('overdue')">Overdue</div>
+    </div>
+  </div>
+
   <h5 class="invoice-item invoice-number font-stmreg">{{dataValues.invoiceNumber}}</h5>
   <h5 class="invoice-item invoice-customer font-stmreg">{{dataValues.clientEmail}}</h5>
   <h5 class="invoice-item invoice-due font-stmreg">{{formatDate dataValues.dueDate}}</h5>
   <h5 class="invoice-item invoice-created font-stmreg">{{formatDate dataValues.dateCreated}}</h5>
-</div>  
+</div>
