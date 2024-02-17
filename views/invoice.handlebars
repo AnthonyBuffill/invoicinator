@@ -1,19 +1,24 @@
 {{> header-loggedin user}}
 <div class="container bg-app-grey min-100-vh" id="main-create-container">
+  
+  <a href="/dashboard" class="bg-app-blue mt-2 mr-2 p-2 app-button-flat text-app-black"><b>
+        ← to Dashboard</b></a>
+  
   <form class="">
+    
     <div class="pt-5">
       <label class="label-item font-casmono" for="invoice-num">invoice#:</label>
-      <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8">
+      <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8" required>
     
       {{!-- <input type="text" placeholder="Your Company Name" id="company-name"> --}}
     </div>
     <div>
       <label class="label-item font-casmono" for="payment-due">Payment Due:</label>
-      <input type="date" id="payment-due">
+      <input type="date" id="payment-due" required>
     </div>
     <div>
       <label class="label-item font-casmono" for="amount-due">Amount Due:</label>
-      <input type="text" placeholder="$00.00" id="amount-due">
+      <input type="text" placeholder="$00.00" id="amount-due" required>
     </div>
 
 <div style="display: flex;">
@@ -21,37 +26,37 @@
     <div id="invoice-user-container">
       <div>
         <label class="label-item font-casmono" for="user-email">User:</label>
-        <input type="email" placeholder="Your Email" id="user-email" value="{{user.email}}">
+        <input type="email" placeholder="Your Email" id="user-email" value="{{user.email}}" required>
       </div>
       <div>
         <label class="label-item" for="company-name"></label>
-        <input type="text" placeholder="Your Name/Company" id="company-name" value="{{user.name}}">
+        <input type="text" placeholder="Your Name/Company" id="company-name" value="{{user.name}}" required>
       </div>
       <div>
         <label class="label-item" for="user-address"></label>
-        <input type="text" placeholder="Address" id="user-address" value="{{user.address}}">
+        <input type="text" placeholder="Address" id="user-address" value="{{user.address}}" required>
       </div>
       <div>
         <label class="label-item" for="user-city"></label>
-        <input type="text" placeholder="City, State, Zip" id="user-city" value="{{user.city}}">
+        <input type="text" placeholder="City, State, Zip" id="user-city" value="{{user.city}}" required>
       </div>
     </div>
     <div id="invoice-client-container">
       <div>
         <label class="label-item-right font-casmono" for="client-email">Client:</label>
-        <input type="email" placeholder="Client Email" id="client-email">
+        <input type="email" placeholder="Client Email" id="client-email" required>
       </div>
       <div>
         <label class="label-item-right" for="client-name"></label>
-        <input type="text" placeholder="Client Name/Company" id="client-name">
+        <input type="text" placeholder="Client Name/Company" id="client-name" required>
       </div>
       <div>
         <label class="label-item-right" for="client-address"></label>
-        <input type="text" placeholder="Billing Address" id="client-address">
+        <input type="text" placeholder="Billing Address" id="client-address" required>
       </div>
       <div>
         <label class="label-item-right" for="client-city"></label>
-        <input type="text" placeholder="City, State, Zip" id="client-city">
+        <input type="text" placeholder="City, State, Zip" id="client-city" required>
       </div>
     </div>
   </div>

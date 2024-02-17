@@ -24,9 +24,16 @@ document.getElementById("closePopup").onclick = ()=>{
 function createInvoice(event) {
   // Prevent the default form submission behavior
   event.preventDefault();
-  event.target.disabled = true;
 
   const allInput = document.querySelectorAll("input");
+  const invalidInputs = checkInputAreValid(allInput);
+  if(invalidInputs.length > 0){
+    console.log("invalid");
+    return;
+  }
+  event.target.disabled = true;
+
+ 
   allInput.forEach(el=>el.disabled = true);
   document.querySelector("textarea").disabled = true;
   // Retrieve input values
@@ -61,7 +68,20 @@ function createInvoice(event) {
     dueDate
   });
 }
-
+function checkInputAreValid(inputs){
+  const invalidInputs = [];
+  for(let i = 0;i<inputs.length;i++){
+    if(!inputs[i].checkValidity()){
+      invalidInputs.push(inputs[i]);
+      inputs[i].classList.add('invalid');
+      inputs[i].onfocus = () =>{
+        inputs[i].classList.remove('invalid');
+        inputs[i].onchange = undefined;
+      }
+    }
+  }
+  return invalidInputs;
+}
 
 function postInvoice(jsonObject) {
   
@@ -75,16 +95,22 @@ function postInvoice(jsonObject) {
   })
   .then(response => {
     if (!response.ok) {
-      throw new Error('Network response failed');
+      document.getElementById("popup").style.display = 'block';
+      document.getElementById('popup-content').innerHTML = invoiceErrorHTML('Network response failed');
+      return;
     }
     return response.json();
   })
   .then(data => {
     document.getElementById("popup").style.display = 'block';
-    document.getElementById('invoice-email').innerHTML = data.html;
+    document.getElementById('popup-content').innerHTML = data.html;
   })
   .catch(error => {
-    console.error('Error sending invoice:', error);
+    console.log(error);
+    document.getElementById("popup").style.display = 'block';
+    document.getElementById('popup-content').innerHTML = invoiceErrorHTML("---");
   });
 }
-
+function invoiceErrorHTML(message){
+  return `<h2>Failed to create invoice</h2><p>${message}</p>`;
+}

@@ -68,3 +68,6 @@ input[type=number] {
   margin-top: 25px;
   margin-right: 75px;
 }
+#main-create-container a{
+  font-size: 18px;
+}

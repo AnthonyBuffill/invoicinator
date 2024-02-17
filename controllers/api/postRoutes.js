@@ -16,8 +16,7 @@ router.post('/', withAuth, async (req, res) => {
     const paidStatusText = req.body.paidStatus = false;
     const userID = req.body.user_id = req.session.user_id;
 
-    // const newInvoice = await Invoice.create(req.body);
-
+    const newInvoice = await Invoice.create(req.body);
    
     // const companyUser = await User.findByPk( req.session.user_id);
     const companyEmail = "raider4414@gmail.com";
@@ -48,35 +47,26 @@ router.post('/', withAuth, async (req, res) => {
     <p>Invoice Details: ${body.invoice_details}</p>
       <!-- Add more invoice details here as needed -->
     `;
-    console.log(invoiceHtml);
-    console.log(companyEmail);
-    console.log(companyName);
-    console.log(clientEmail);
-    console.log(clientName);
 
     // Send email using Mailjet
-
-    // await mailjet.post('send', { version: 'v3.1' }).request({
-    //   Messages: [
-    //     {
-    //       From: {
-    //         Email: companyEmail,
-    //         Name: companyName,
-    //       },
-    //       To: [
-    //         {
-    //           Email: clientEmail,
-    //           Name: clientName,
-    //         },
-    //       ],
-    //       Subject: 'New Invoice Created',
-    //       HTMLPart: invoiceHtml, 
-    //     },
-    //   ],
-    // });
-
-    
-    // await request;
+    await mailjet.post('send', { version: 'v3.1' }).request({
+      Messages: [
+        {
+          From: {
+            Email: companyEmail,
+            Name: companyName,
+          },
+          To: [
+            {
+              Email: clientEmail,
+              Name: clientName,
+            },
+          ],
+          Subject: 'New Invoice Created',
+          HTMLPart: invoiceHtml, 
+        },
+      ],
+    });
 
     
     res.status(201).json({
