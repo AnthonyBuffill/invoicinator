@@ -19,6 +19,12 @@
 .text-app-blue{
   color: #6BA2FF;
 }
+.text-app-grey{
+  color: #ABBDC2;
+}
+.text-app-black{
+  color: #202020;
+}
 .bg-app-red{
   background-color: #440100;
 

@@ -16,7 +16,7 @@ router.post('/', withAuth, async (req, res) => {
     const paidStatusText = req.body.paidStatus = false;
     const userID = req.body.user_id = req.session.user_id;
 
-    const newInvoice = await Invoice.create(req.body);
+    // const newInvoice = await Invoice.create(req.body);
 
    
     // const companyUser = await User.findByPk( req.session.user_id);
@@ -55,30 +55,34 @@ router.post('/', withAuth, async (req, res) => {
     console.log(clientName);
 
     // Send email using Mailjet
-    await mailjet.post('send', { version: 'v3.1' }).request({
-      Messages: [
-        {
-          From: {
-            Email: companyEmail,
-            Name: companyName,
-          },
-          To: [
-            {
-              Email: clientEmail,
-              Name: clientName,
-            },
-          ],
-          Subject: 'New Invoice Created',
-          HTMLPart: invoiceHtml, 
-        },
-      ],
-    });
+
+    // await mailjet.post('send', { version: 'v3.1' }).request({
+    //   Messages: [
+    //     {
+    //       From: {
+    //         Email: companyEmail,
+    //         Name: companyName,
+    //       },
+    //       To: [
+    //         {
+    //           Email: clientEmail,
+    //           Name: clientName,
+    //         },
+    //       ],
+    //       Subject: 'New Invoice Created',
+    //       HTMLPart: invoiceHtml, 
+    //     },
+    //   ],
+    // });
 
     
     // await request;
 
     
-    res.status(201).json(newInvoice);
+    res.status(201).json({
+      // newInvoice, 
+      html:invoiceHtml
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to create invoice or send email' });
