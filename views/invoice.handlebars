@@ -1,68 +1,74 @@
-{{> header-loggedin}}
+{{> header-loggedin user}}
 <div class="container bg-app-grey min-100-vh" id="main-create-container">
+  
+  <a href="/dashboard" class="bg-app-blue mt-2 mr-2 p-2 app-button-flat text-app-black"><b>
+        ← to Dashboard</b></a>
+  
   <form class="">
-    <div class="pt-5">
-      <label class="label-item" for="invoice-num">invoice#:</label>
-      <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8">
     
-      <input type="text" placeholder="Your Company Name" id="company-name">
+    <div class="pt-5">
+      <label class="label-item font-casmono" for="invoice-num">invoice#:</label>
+      <input type="text" placeholder="1234ABCD" id="invoice-num" maxlength="8" required>
+    
+      {{!-- <input type="text" placeholder="Your Company Name" id="company-name"> --}}
     </div>
     <div>
-      <label class="label-item" for="payment-due">Payment Due:</label>
-      <input type="date" id="payment-due">
+      <label class="label-item font-casmono" for="payment-due">Payment Due:</label>
+      <input type="date" id="payment-due" required>
     </div>
     <div>
-      <label class="label-item" for="amount-due">Amount Due:</label>
-      <input type="number" placeholder="0.00" id="amount-due">
+      <label class="label-item font-casmono" for="amount-due">Amount Due:</label>
+      <input type="text" placeholder="$00.00" id="amount-due" required>
     </div>
 
 <div style="display: flex;">
 
     <div id="invoice-user-container">
       <div>
-        <label class="label-item" for="user-email">User:</label>
-        <input type="email" placeholder="Your Email" id="user-email">
+        <label class="label-item font-casmono" for="user-email">User:</label>
+        <input type="email" placeholder="Your Email" id="user-email" value="{{user.email}}" required>
       </div>
       <div>
-        <label class="label-item" for="user-name"></label>
-        <input type="text" placeholder="Your Name" id="user-name">
+        <label class="label-item" for="company-name"></label>
+        <input type="text" placeholder="Your Name/Company" id="company-name" value="{{user.name}}" required>
       </div>
       <div>
         <label class="label-item" for="user-address"></label>
-        <input type="text" placeholder="Address" id="user-address">
+        <input type="text" placeholder="Address" id="user-address" value="{{user.address}}" required>
       </div>
       <div>
         <label class="label-item" for="user-city"></label>
-        <input type="text" placeholder="City, State, Zip" id="user-city">
+        <input type="text" placeholder="City, State, Zip" id="user-city" value="{{user.city}}" required>
       </div>
     </div>
     <div id="invoice-client-container">
       <div>
-        <label class="label-item-right" for="client-email">Client:</label>
-        <input type="email" placeholder="Client Email" id="client-email">
+        <label class="label-item-right font-casmono" for="client-email">Client:</label>
+        <input type="email" placeholder="Client Email" id="client-email" required>
       </div>
       <div>
         <label class="label-item-right" for="client-name"></label>
-        <input type="text" placeholder="Client Name" id="client-name">
+        <input type="text" placeholder="Client Name/Company" id="client-name" required>
       </div>
       <div>
         <label class="label-item-right" for="client-address"></label>
-        <input type="text" placeholder="Billing Address" id="client-address">
+        <input type="text" placeholder="Billing Address" id="client-address" required>
       </div>
       <div>
         <label class="label-item-right" for="client-city"></label>
-        <input type="text" placeholder="City, State, Zip" id="client-city">
+        <input type="text" placeholder="City, State, Zip" id="client-city" required>
       </div>
     </div>
   </div>
 
     <div class="invoice-bottom">
       <div id="details-container">
-        <label class="label-item" for="invoice-details">Invoice Details:</label>
+        <label class="label-item font-casmono" for="invoice-details">Invoice&nbsp; Details:</label>
         <textarea style="resize: none;" type="text" placeholder="Details of work provided", id="invoice-details"></textarea>
       </div>
       <button type="submit" id="send-invoice-button">Send Invoice</button>
     </div>
   </form>
-  <script src="/js/invoice.js"></script>
+  {{> popup}}
+  <script src="/js/create-invoice/invoice.js"></script>
 </div>

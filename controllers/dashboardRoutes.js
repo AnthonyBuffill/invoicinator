@@ -10,8 +10,13 @@ router.get('/', withAuth, async (req, res) => {
         // Fetch invoices from the database for the loggedin user
         const invoices = await Invoice.findAll({ where: { user_id: req.session.user_id } });
         const user = await User.findByPk(req.session.user_id);
-        // Render the dashboard view with the fetched invoices
-        res.render('dashboard', { invoices, user });
+        if(invoices.length > 0){
+            req.session.save(() => {
+                req.session.last_invoice_id = invoices[invoices.length - 1].id;
+            });
+        }
+            // Render the dashboard view with the fetched invoices
+        return res.render('dashboard', { invoices, user });
     } catch (error) {
         console.error('Error fetching invoices:', error);
         res.json(error)
@@ -69,7 +74,22 @@ router.delete('/invoices/:id/delete', withAuth, async (req, res) => {
 });
 
 router.get('/createinvoice', withAuth, async (req, res)=>{
-    res.render("invoice");
+    const lastInvoice = await Invoice.findByPk(req.session.last_invoice_id);
+
+    const user = {
+        email:req.session.user_email,
+        name:"",
+        address:"",
+        city:"",
+    };
+    if(lastInvoice){
+        console.log(lastInvoice);
+        user.name = lastInvoice.companyName;
+        user.address = lastInvoice.companyStreetAddress;
+        user.city = lastInvoice.companyCityAddress;
+    }
+    console.log(user);
+    return res.render("invoice", {user});
 });
 
 module.exports = router;  

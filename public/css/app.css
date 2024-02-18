@@ -19,6 +19,12 @@
 .text-app-blue{
   color: #6BA2FF;
 }
+.text-app-grey{
+  color: #ABBDC2;
+}
+.text-app-black{
+  color: #202020;
+}
 .bg-app-red{
   background-color: #440100;
 
@@ -36,7 +42,6 @@
   transition-duration: 0.4s;
 }
 .app-button-flat{
-  border-radius: 5%;
   cursor: pointer;
   transition-duration: 0.4s;
 }
@@ -49,4 +54,7 @@
   background-color: white;
   color: black;
   outline: black solid 2px;
+}
+.invalid{
+  outline: red solid 3px;
 }
