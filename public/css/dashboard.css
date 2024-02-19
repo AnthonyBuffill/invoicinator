@@ -54,6 +54,7 @@
 .invoice-status{
   width: 100px;
   font-size: 14px;
+  margin: auto;
 }
 .invoice-number{
   width: 100px;
