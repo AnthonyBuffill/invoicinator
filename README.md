@@ -117,7 +117,7 @@ or harmful.
 
 ## Deployment
 
-HEROKU: https://invoicinator-e5b9fce169c1.herokuapp.com/dashboard
+HEROKU: https://invoicinator-e5b9fce169c1.herokuapp.com
 
 GITHUB repository: https://github.com/AnthonyBuffill/invoicinator
 
